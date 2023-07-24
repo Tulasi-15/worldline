@@ -1,0 +1,526 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: url("./assets/bg-texture.png");
+  background-color: #1f1f38;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+}
+
+.container {
+  width: 75%;
+  margin: 0 auto;
+}
+
+.text-light {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.section {
+  height: 100%;
+  margin: 0 auto;
+  padding: 4rem 0;
+  position: relative;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 500;
+  margin: 0;
+}
+
+.section h2, .section h5 {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.section h2 {
+  color: #4db5ff;
+  margin-bottom: 3rem;
+}
+
+a {
+  text-decoration: none;
+  color: #4db5ff;
+  transition: all 400ms ease;
+}
+
+a:hover {
+  color: white;
+}
+
+.btn {
+  display: inline-block;
+  color: #4db5ff;
+  padding: 0.75rem 1.2rem;
+  border-radius: 0.4rem;
+  border: 1px solid #4db5ff;
+  cursor: pointer;
+  transition: all 400ms ease;
+}
+
+.btn:hover {
+  color: #1f1f38;
+  background-color: white;
+  border: transparent;
+}
+
+.disabled, .disabled:hover {
+  background-color: gray;
+  border: none;
+  color: #000000;
+  cursor: no-drop;
+}
+
+.btn-primary {
+  color: #1f1f38;
+  background-color: #4db5ff;
+}
+
+.center {
+  text-align: center;
+}
+
+/*******************************************************/
+.my_pic {
+  background: linear-gradient(#4db5ff, transparent);
+  border-radius: 69% 39% 62% 17%/45% 60% 40% 55%;
+  height: 30rem;
+  width: 22rem;
+  margin-top: 2rem;
+}
+
+.social {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.social::after {
+  content: "";
+  width: 1px;
+  height: 2rem;
+  background-color: #4db5ff;
+}
+
+.scroll_down {
+  color: #4db5ff;
+}
+
+.midpart {
+  margin-top: 2.5rem;
+  display: inline-flex;
+}
+.midpart a {
+  margin: 0 20px;
+}
+
+.scroll_down {
+  position: absolute;
+  right: -1.5rem;
+  bottom: 5rem;
+  transform: rotate(90deg);
+}
+
+.nav {
+  background-color: rgba(0, 0, 0, 0.5);
+  display: block;
+  display: flex;
+  padding: 0.5rem 1rem;
+  border-radius: 3rem;
+  position: fixed;
+  bottom: 3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  gap: 2rem;
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  z-index: 1;
+}
+.nav a {
+  color: rgba(255, 255, 255, 0.6);
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  text-align: center;
+  background: transparent;
+}
+.nav i {
+  position: relative;
+  transform: translateY(-50%);
+  top: 50%;
+}
+.nav a:hover {
+  background: rgba(0, 0, 0, 0.3);
+  color: white;
+}
+.nav .active {
+  background-color: #4db5ff;
+  color: #1f1f38;
+}
+
+.myImage {
+  height: 400px;
+  width: 400px;
+  aspect-ratio: 1/1;
+  border-radius: 2rem;
+  background: linear-gradient(45deg, transparent, #4db5ff, transparent);
+}
+.myImage img {
+  height: 400px;
+  width: 400px;
+  border-radius: 2rem;
+  transform: rotate(5deg);
+  transition: all 400ms ease;
+}
+.myImage img:hover {
+  transform: rotate(0);
+}
+
+.aboutMe_container {
+  display: grid;
+  grid-template-columns: 35% 50%;
+  gap: 15%;
+}
+.aboutMe_container .aboutMe_cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.aboutMe_container .aboutMe_card {
+  height: 150px;
+  width: 150px;
+  background-color: #2c2c6c;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+}
+.aboutMe_container i {
+  color: #4db5ff;
+}
+.aboutMe_container h3 {
+  font-weight: 500;
+}
+.aboutMe_container h5 {
+  font-size: small;
+}
+.aboutMe_container .aboutMe_card:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.aboutMe_container p {
+  text-align: left;
+  margin: 30px 0;
+}
+.aboutMe_container .aboutMe_buttons {
+  display: flex;
+  justify-content: end;
+}
+.aboutMe_container .aboutMe_buttons a {
+  margin-right: 1rem;
+}
+
+#contact .contact_ways {
+  display: grid;
+  grid-template-columns: 20% 80%;
+}
+#contact .contact_ways .ways {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  aspect-ratio: 2/1;
+  margin-bottom: 1rem;
+  border-radius: 2rem;
+}
+#contact .contact_ways .active {
+  background-color: rgba(77, 181, 255, 0.4);
+}
+#contact .contact_ways .ways:hover {
+  background-color: rgba(77, 181, 255, 0.4);
+}
+#contact .contact_ways .contact_social form {
+  display: flex;
+  width: 60%;
+  height: 100%;
+  margin: 0 auto 2rem;
+  flex-direction: column;
+  justify-content: space-between;
+  color: white;
+}
+#contact .contact_ways .contact_social form input, #contact .contact_ways .contact_social form textarea {
+  background-color: transparent;
+  outline: none;
+  border: 1px solid #4db5ff;
+  border-radius: 1rem;
+  resize: none;
+  padding: 1rem;
+  font-size: 1rem;
+  color: white;
+}
+#contact .contact_ways .contact_social form button {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+#contact .contact_ways .contact_details .show {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#contact .contact_ways .contact_details .hide {
+  display: none;
+}
+
+#skills .myskills {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+#skills .myskills .fullstack, #skills .myskills .intern, #skills .myskills .prog_lang {
+  background-color: #2c2c6c;
+  margin: 0 2rem;
+  padding: 1.5rem 3rem;
+  border-radius: 3rem;
+  border: 3px solid #2c2c6c;
+}
+#skills .myskills .fullstack h3, #skills .myskills .intern h3, #skills .myskills .prog_lang h3 {
+  text-align: center;
+  margin: 2rem 0;
+  color: #4db5ff;
+  font-size: x-large;
+}
+#skills .myskills .fullstack .langs, #skills .myskills .intern .langs, #skills .myskills .prog_lang .langs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  -moz-column-gap: 2rem;
+       column-gap: 2rem;
+  row-gap: 2rem;
+}
+#skills .myskills .fullstack .langs li, #skills .myskills .intern .langs li, #skills .myskills .prog_lang .langs li {
+  text-align: left;
+  padding: 0 10px;
+}
+#skills .myskills .fullstack .langs li h4, #skills .myskills .intern .langs li h4, #skills .myskills .prog_lang .langs li h4 {
+  font-size: large;
+}
+#skills .myskills .prog_lang {
+  grid-row: 1/3;
+}
+#skills .myskills .prog_lang .langs {
+  grid-template-columns: auto;
+}
+#skills .myskills .fullstack {
+  grid-column: 2;
+  margin: auto 0;
+}
+#skills .myskills .intern {
+  grid-column: 2;
+  margin: auto 0;
+  padding: auto 1rem;
+}
+#skills .myskills .intern .langs {
+  grid-template-columns: auto;
+}
+#skills .myskills :hover {
+  background-color: transparent;
+  transition: all 400ms ease;
+}
+
+#projects .project_container {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(100px, 1fr));
+  gap: 2.5rem;
+  overflow-x: scroll;
+}
+#projects .project_container .project_details {
+  display: inline-block;
+  border-radius: 2rem;
+  border: 3px solid #2c2c6c;
+  padding: 2rem 1rem;
+}
+#projects .project_container .project_details h3 {
+  margin: 1rem 0;
+}
+#projects .project_container .project_details div {
+  display: flex;
+  justify-content: space-around;
+}
+#projects .project_container .project_details .project_images {
+  width: 95%;
+  padding: 0 10px;
+}
+#projects .project_container > :hover {
+  background-color: #2c2c6c;
+  transition: all 400ms ease;
+}
+#projects .project_container::-webkit-scrollbar {
+  display: none;
+}
+
+footer {
+  background-color: #4db5ff;
+  padding: 3rem 0 7rem;
+  text-align: center;
+}
+footer .links {
+  -webkit-padding-start: 0;
+          padding-inline-start: 0;
+  list-style: none;
+  display: inline-flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+footer .links a {
+  color: #1f1f38;
+  font-size: large;
+  font-weight: 400;
+}
+footer .links a:hover {
+  color: #2c2c6c;
+}
+footer .social_links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-direction: row;
+  list-style: none;
+  -webkit-padding-start: 0;
+          padding-inline-start: 0;
+}
+footer .social_links li a i {
+  background-color: #1f1f38;
+  padding: 5px 7px;
+  border-radius: 7px;
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+    width: var(85%);
+  }
+  .section {
+    padding-top: 6rem;
+  }
+  .nav a:hover {
+    background-color: #4db5ff;
+    color: #1f1f38;
+  }
+  .aboutMe_container {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .aboutMe_container .myImage {
+    margin: 0rem auto 3rem;
+  }
+  .aboutMe_container .aboutMe_buttons {
+    justify-content: center;
+  }
+  #skills .myskills {
+    grid-template-columns: auto;
+  }
+  #skills .myskills .prog_lang, #skills .myskills .fullstack, #skills .myskills .intern {
+    width: 80%;
+    margin: 1.5rem 0;
+    grid-column: 1;
+  }
+  #skills .myskills .prog_lang > .langs {
+    grid-template-columns: auto auto;
+  }
+  #projects .project_container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  #projects .project_container .project_details .project_images {
+    min-height: 150px;
+    max-height: 180px;
+  }
+}
+@media screen and (max-width: 600px) {
+  html, body {
+    overflow-x: hidden;
+  }
+  .container {
+    width: var(90%);
+  }
+  .nav {
+    gap: 1rem;
+  }
+  .section {
+    padding-top: 3rem;
+  }
+  .scroll_down, .social {
+    display: none;
+  }
+  #home .my_pic {
+    height: 27rem;
+    width: 20rem;
+  }
+  .aboutMe_container {
+    grid-template-columns: 100%;
+  }
+  .aboutMe_container .aboutMe_cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  .aboutMe_container .myImage {
+    height: 250px;
+    width: 250px;
+    margin: 0rem auto 3rem;
+  }
+  .aboutMe_container .myImage img {
+    height: inherit;
+    width: inherit;
+  }
+  .aboutMe_container .aboutMe_buttons {
+    justify-content: flex-end;
+  }
+  .aboutMe_container .aboutMe_buttons a {
+    margin-right: 1rem;
+  }
+  #contact .contact_ways {
+    grid-template-columns: auto;
+  }
+  #contact .contact_ways .contact_sidebar {
+    display: grid;
+    grid-template-columns: 45% 45%;
+    gap: 10%;
+    margin-bottom: 2rem;
+  }
+  #contact .contact_ways .contact_social form {
+    width: 100%;
+  }
+  #skills {
+    width: 100%;
+  }
+  #skills .myskills {
+    grid-template-columns: auto;
+  }
+  #skills .myskills .prog_lang, #skills .myskills .fullstack, #skills .myskills .intern {
+    grid-column: 1;
+    width: 70%;
+    margin: 1rem auto;
+    padding: 1rem 2rem;
+  }
+  #skills .myskills .prog_lang > .langs {
+    grid-template-columns: 1fr 1fr;
+  }
+  #projects .project_container {
+    grid-template-columns: 1fr;
+  }
+  footer .links {
+    flex-direction: column;
+  }
+}/*# sourceMappingURL=portfolio.css.map */
