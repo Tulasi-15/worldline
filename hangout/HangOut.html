@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1.00">
+        <title>HangOut</title>
+        <style>
+            h1{color: rgb(255, 118, 209); margin-left:400px ;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;text-transform: uppercase;}
+            #yes{position: relative;height: 96px;width: 96px; margin-top: 550px; margin-left: 800px;background:transparent url("icons8-heart-with-arrow-96.png");border: none;}
+            img{position: absolute; margin-left: 34%; height: 500px;background-color: transparent; }
+            #b{background-color:rgb(211, 84, 158);background-repeat: no-repeat;
+                background-image: url('https://img.freepik.com/premium-photo/pastel-tone-purple-pink-blue-gradient-defocused-abstract-photo-smooth-lines-pantone-color-background_49683-4059.jpg?w=1060');background-size:cover; overflow: hidden;
+            }
+            #no{position: absolute; background:transparent url("icons8-close-48.png");mix-blend-mode:hard-light; width: 50px; height: 50px;border: none;}
+            #img2{margin-left: 1000px;height: 100px;}
+
+            @media screen and (max-width:500px) {
+                h1{margin-top: 10%; width: 500px; margin-left: 100px ; text-align: center;}
+                #b{background-color: #550086;opacity: 0.9;background-position: center;background-repeat: repeat;
+background-image: radial-gradient(circle at center center, #e449ff, #550086), repeating-radial-gradient(circle at center center, #e449ff, #e449ff, 10px, transparent 20px, transparent 10px);
+background-blend-mode: multiply;}
+img{height: 780px; margin-top: 10%; margin-left: 5px;}
+#yes{margin-top: 1000px; margin-left: 300px;height: 96px;padding: 10px;}
+#img2{margin-top: 1px; margin-left: 600px; height: 150px;}
+
+}
+        
+
+        </style>
+    </head>
+        <body id="b">
+        <h1 id="h">why am i so obsessed with you???</h1>
+        <img id="i" src="https://media.tenor.com/pMEWIQ2HQecAAAAd/chiki-cat-cat-beg.gif" alt="img">
+        <button type="button" id="yes" onclick="ch()"></button>
+        <button type="button" id="no" style="top: 660px;left:600px" onmouseover="mov()"></button>
+            <script>
+            function ch(){
+                var te = document.getElementById("b")
+                te.style.backgroundImage="url('https://img.freepik.com/free-vector/vibrant-pink-watercolor-painting-background_53876-58931.jpg?w=996&t=st=1667492220~exp=1667492820~hmac=08b7b587c3cd0be15f996b6ff80a6ebedf2f4846e802ede5f9722d89464014d6')"
+                var m = document.getElementById("i")
+                m.src="pngwing.com.png"
+                const v=document.createElement("img")
+                v.setAttribute("id","img2")
+                v.src="pngwing.com (1).png"
+                document.body.appendChild(v)
+                document.getElementById("no").remove();
+                document.getElementById("yes").remove();
+                document.getElementById("h").innerHTML="thank you love!!!!! send me the hang out plan "
+            }
+            function mov(){
+            var t = document.getElementById("no");
+            var ot = (t.style.top).substring(0,(t.style.top).length-2);
+            var ol = (t.style.left).substring(0,(t.style.left).length-2);
+            var ct = (Math.random()*(window.innerHeight-parseInt(ot)));
+            var cl = (Math.random()*(window.innerWidth-parseInt(ol)));
+            t.style.top=ct+"px";
+            t.style.left=cl+'px';
+            
+            }
+            
+        </script>
+    </body>
+</html>
